@@ -20,7 +20,7 @@ namespace Tem_Aqui.Models
 
         public DbSet<Login> Login { get; set; }
 
-        // public DbSet<Exame> Exame { get; set; }
+        public DbSet<Cadastro> Cadastro { get; set; }
 
         //public DbSet<Paciente> Paciente { get; set; }
 
