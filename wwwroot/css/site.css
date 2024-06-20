@@ -18,5 +18,27 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 0px;
+}
+
+.imagem {
+    width: 50%;
+    margin-top: 30px;
+}
+.rodape {
+    background-color: #514A83;
+    height: 100px;
+}
+.container-fluid {
+    background-color: #796DC7;
+}
+.navbar {
+    padding: 0 !important;
+}
+
+.navbar-brand {
+    padding: 0 !important;
+}
+.navbar-brand img {
+        height: 60px;
 }
