@@ -12,8 +12,8 @@ using Tem_Aqui.Models;
 namespace Tem_Aqui.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20240614110656_Criacao-login")]
-    partial class Criacaologin
+    [Migration("20240620172034_inicial")]
+    partial class inicial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,6 +51,49 @@ namespace Tem_Aqui.Migrations
                     b.HasIndex("PrestadordeservicoId");
 
                     b.ToTable("SerPres");
+                });
+
+            modelBuilder.Entity("Tem_Aqui.Models.Cadastro", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("CadastroId");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("CadastroNome")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("CadastroNome");
+
+                    b.Property<string>("Cnpj")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Cnpj");
+
+                    b.Property<string>("Descrição")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Descrição");
+
+                    b.Property<string>("Foto")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Foto");
+
+                    b.Property<string>("Localidade")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Localidade");
+
+                    b.Property<int>("Telefone")
+                        .HasColumnType("int")
+                        .HasColumnName("Telefone");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Cadastro");
                 });
 
             modelBuilder.Entity("Tem_Aqui.Models.Login", b =>
